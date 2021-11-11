@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+/* font-family: 'Nanum Pen Script', cursive; */
+/* font-family: verdana; */
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {font-family: verdana;}
+@media screen and (min-width: 992px) {
+    .container {max-width: 1000px !important;}
+}
+@media screen and (min-width: 1200px) {
+    .container {max-width: 1200px !important;}
+}
+@font-face {
+  src: url('../vendors/font/verdana.ttf');
+  font-family: verdana;
+}
+a,
+a:link,
+a:hover,
+a:active,
+a:visited {text-decoration: none;}
+li, p {
+    font-size: 16px;
+    color: #51554E;
+}
+img {width: 100%;}
+ul, ol {list-style-type: none;}
+
+/* navber style strat */
+.navbar {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.2s;
+    position: relative;
+    background: #fff;
+    padding: 0;
+}
+.navbar .container {z-index: 9999;}
+.navbar .navbar-toggler {color: #000;}
+.navbar .brand {margin-right: 25px;}
+.navbar .brand img {
+	transition: all 0.2s;
+    max-width: 225px;
+    width: auto;
+    max-height: 90px;
+}
+.navbar form {
+    align-items: center;
+	margin-right: 30px;
+    height: 75px;
+    display: flex;
+}
+.navbar .form-group {
+	border: 1px solid #75C336;
+    align-items: center;
+    display: flex;
+    margin: 0;
+    border-radius: 8px;
+}
+.navbar .form-group i {
+	margin: 0 14px;
+    color: #75C336;
+    font-size: 22px;
+}
+.navbar .form-group .form-control::placeholder {color: #75C336;}
+.navbar .form-group .form-control {
+	border-radius: 8px;
+    min-width: 225px;
+    font-size: 14px;
+    outline: none;
+    padding: 0;
+    border: none;
+    color: #75C336;
+    overflow: hidden;
+    box-shadow: none;
+}
+.navbar .navbar-nav a.nav-link {
+    display: inline-block;
+    transition: all 0.2s;
+    line-height: 95px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 15px;
+    color: #72BE35;
+    height: 95px;
+    padding: 0;
+    position: relative;
+}
+.navbar .navbar-nav a.nav-link:hover,
+.navbar .navbar-nav a.nav-link.active {color: #000;}
+.navbar .navbar-nav li:first-child a {margin-left: 0;}
+.navbar .navbar-nav li:last-child a {margin-right: 0;}
+@media screen and (min-width: 992px) {
+    .navbar .navbar-collapse {
+        justify-content: flex-end;
+        display: flex;
+    }
+	.navbar:after {
+		background-image: url('../images/bg_images/nav_bg.svg');
+		background-position: top center;
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		display: inline-block;
+		position: absolute;
+		content: '';
+		left: 0;
+		top: 0;
+		width: 100%;
+		min-height: 275px;
+		transition: all .2s;
+	}
+	.navbar.active:after {min-height: 65px;}
+}
+@media screen and (min-width: 1800px) {
+	.navbar:after {min-height: 310px;}
+}
+@media screen and (max-width: 991px) {
+	.fixed-top {z-index: 9999999;}
+    .contact-nav .social a i {font-size: 18px;}
+    .navbar-expand-lg > .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+	.navbar:before {
+        background: rgba(0, 0, 0, 0.05);
+        display: inline-block;
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 1px;
+        top: 75px;
+        left: 0;
+    }
+	.navbar form {margin: 0;}
+	.navbar .form-group {width: 100%;}
+    .navbar .navbar-toggler {
+        display: inline-block;
+        line-height: 75px;
+        font-weight: bold;
+        font-size: 28px;
+        outline: none;
+        height: 75px;
+        border: none;
+        padding: 0;
+		color: #75C336;
+    }
+    .navbar .navbar-nav a.nav-link {
+        border-top: 1px solid #ddd;
+        line-height: 40px;
+        height: 40px;
+        width: 100%;
+        margin: 0;
+    }
+    .navbar .navbar-nav li:first-child a.nav-link {border-top: none;}
+	.navbar .navbar-nav li:last-child a {margin-bottom: 8px;}
+}
+@media screen and (max-width: 768px) {
+	.navbar .brand img {max-height: 65px;}
+}
+/* navber style end */
+
+
+
+/* section title start */
+.section_title {
+	margin-bottom: 60px;
+	text-align: center;
+}
+.section_title h2 {
+	font-family: 'Nanum Pen Script', cursive;
+    font-weight: bold;
+    font-size: 48px;
+    color: #75C336;
+    line-height: 52px;
+}
+@media screen and (max-width: 576px) {
+	.section_title h2 {
+		line-height: 35px;
+		font-size: 35px;
+	}
+	li, p {font-size: 15px;}
+}
+/* section title end */
+
+
+
+/* footer style start */
+.footer_section {
+	background-image: url('../images/bg_images/footer_bg.svg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-color: #fff;
+    padding: 125px 0 25px;
+	position: relative;
+	margin-top: 145px;
+}
+.footer_section:after {
+	background-image: url('../images/bg_images/footer_top.svg');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: revert;
+    display: inline-block;
+    position: absolute;
+    content: '';
+    right: 25%;
+    top: -150px;
+    width: 162px;
+    height: 162px;
+}
+.footer_section .container {
+	background-image: url('../images/bg_images/footer_down.svg');
+	background-position: right bottom;
+	background-repeat: no-repeat;
+	background-size: revert;
+}
+.footer_section .footer_navbar {
+	justify-content: space-between;
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+}
+.footer_section .navbar_link a {
+	display: inline-block;
+	font-weight: 400;
+	font-size: 18px;
+	color: #75C336;
+	margin: 5px 0 5px 35px;
+}  
+.footer_section .footer_title {
+	font-family: 'Nanum Pen Script', cursive;
+	text-align: right;
+	color: #75C336;
+	font-size: 48px;
+	font-weight: 600;
+	margin-top: 15px;
+}
+.footer_section .navbar_link {
+	justify-content: flex-end;
+	margin-bottom: 0;
+	flex-wrap: wrap;
+	display: flex;
+	width: 100%;
+}
+@media screen and (max-width: 576px) {
+	.footer_section .container {
+		background-size: contain;
+	}
+	.footer_section {
+		padding: 75px 0 15px;
+		margin-top: 120px;
+	}
+	.footer_section:after {
+		background-size: 100%;
+		top: -125px;
+		right: 12%;
+		width: 125px;
+		height: 125px;
+	}
+	.footer_section .brand {
+		margin-bottom: 10px;
+		max-width: 200px;
+	}
+	.footer_section .navbar_link a {
+		margin: 5px 0 5px 8px;
+		font-size: 14px;
+	}
+	.footer_section .footer_title {
+		font-size: 20px;
+		margin-top: 5px;
+	}
+}
+/* footer style end */
